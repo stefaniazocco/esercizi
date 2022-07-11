@@ -1,0 +1,63 @@
+:root {
+    --border:#899dae;
+    --uguale:#f37373;
+    --più:#d2dce3;
+    --risultato:#414850;
+    --numeri:#e6edef;
+}
+.grid { 
+    max-height: 350px;
+    max-width: 350px;
+    display: grid;
+    grid-template-rows: repeat(6, 50px);
+    grid-template-columns: repeat(4, 70px);
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px; 
+}
+
+.risultato {
+    grid-column: 1/5;
+    background-color: var(--risultato);
+    font-size: 35px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 10px;
+}
+div:not(.risultato) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.più, .meno, .per, .diviso {
+    background-color: var(--più);
+    border-bottom: 2px solid var(--border);
+}
+.più, .meno, .per {
+    border-right: 2px solid var(--border);
+}
+
+.numeri {
+    background-color: var(--numeri);
+    border-right: 2px solid var(--border);
+    border-bottom: 2px solid var(--border);
+}
+.uguale {
+    grid-column: 4;
+    grid-row: 3 / 7;
+    background-color: var(--uguale);
+    border-bottom-right-radius: 10px;
+}
+.angolo {
+    background-color: rgb(243, 235, 235);
+    border-right: 2px solid var(--border);
+    border-bottom-left-radius: 10px;
+}
+.basso {
+    background-color: rgb(243, 235, 235);
+    border-right: 2px solid var(--border);
+}

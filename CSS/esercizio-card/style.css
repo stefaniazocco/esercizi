@@ -1,0 +1,38 @@
+article {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    font-family: sans-serif, Calibri,'Gill Sans', 'Gill Sans MT', 'Trebuchet MS';
+    font-size: clamp(0.5em, 0.1em + 5vw, 2em);
+}
+
+img {
+    max-width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-main, .card-body, .card-link{
+    border-bottom: 1px solid rgba(139, 137, 137, 0.466);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 1px solid rgba(139, 137, 137, 0.466);
+    border-right: 1px solid rgba(139, 137, 137, 0.466);
+}
+
+.card-main {
+    padding-left: 5%;
+    padding-right: 8%;
+}
+
+.card-body {
+    
+    padding: 4% 5%;
+}
+
+.card-link {
+    display: flex;
+    padding: 5% 5%;
+}
+
+a {padding-right: 10%;}

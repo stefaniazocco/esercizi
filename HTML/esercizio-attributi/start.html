@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Attributi</title>
+</head>
+
+<body>
+    <form>
+        <div>
+            <button type="submit" disabled>clicca qui</button>
+        </div>
+        <br />
+        <div>
+            <input type="number" name="quantity" id="number" min="0" max="100" step="2" autofocus>
+            <label for="number">numeri pari da 0 a 100</label>
+        </div>
+        <br />
+        <fieldset>
+            <p>seleziona dei numeri su questa checkbox</p>
+            <input type="checkbox" id="opt0" name="opt0" value="0" checked>
+            <label for="opt0">0</label> <br />
+            <input type="checkbox" id="opt1" name="opt1" value="1">
+            <label for="opt1">1</label> <br />
+            <input type="checkbox" id="opt2" name="opt2" value="2">
+            <label for="opt2">2</label> <br />
+            <input type="checkbox" id="opt3" name="opt3" value="3">
+            <label for="opt3">3</label> 
+        </fieldset>  
+        <br />
+        <div>
+            <label for="date">data di nascita:</label>
+            <input type="date" id="date" name="bdate">
+        </div>
+    </form>  
+</body>
+
+</html>

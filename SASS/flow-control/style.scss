@@ -1,0 +1,89 @@
+$green: green;
+$red: red;
+$blue: blue;
+
+@function rem($px){
+    $value: calc($px / 16) +rem ;
+    @return $value;
+}
+
+body>div {
+    border: rem(1) solid $red;
+    display: flex;
+    flex-direction: column;
+    padding: rem(10);
+    gap: rem(10);
+    h1 {
+        @extend %heading;
+        text-decoration: underline;
+        text-decoration-color: $blue;
+    }    
+    h2 {
+        @extend %heading;
+        border: rem(1) solid $red;
+        padding: 1rem;
+    }
+    section {
+        display: flex;
+        flex-direction: row;
+        }
+}
+  
+%heading {
+    color: $green;
+    align-self: center;
+}
+
+@mixin article-card($color, $border, $font-size) {
+    color: $color;
+    border: $border;
+    font-size: $font-size;
+}
+
+article {
+    @include article-card($red, rem(1) solid $green, 1rem)
+}
+article:nth-of-type(odd) {
+    @include article-card($blue, rem(1) solid $green, 1rem)
+}
+section:last-of-type article {
+    @include article-card($green, rem(1) solid $blue, rem(24));
+    width: 100%;
+}
+
+div section article p {
+    padding: rem(10);
+    align-self: center;
+    text-align: center;
+}
+
+section:nth-of-type(2) {
+    min-width: 100%;
+    justify-content: space-between;
+    div {
+        width: rem(45);
+        height: rem(45);
+        border: rem(1) solid $red;
+    }
+}
+
+$sizes: 1rem, 2rem, 3rem;
+
+@each $rem in $sizes {
+    .fs-#{$rem} {
+        font-size: $rem;  
+    }
+}
+section:nth-of-type(2) div {
+    @for $i from 1 through 19 {
+      &:nth-child(#{$i}) {
+         background: darken($color: white, $amount: $i * 5%);
+         color: lighten($color: black, $amount: $i * 5%);
+      }
+      &:nth-child(10) {
+        background-color: $blue;
+        color: $red;
+        font-weight: bold;
+        }
+    }
+}

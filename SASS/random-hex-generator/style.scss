@@ -1,0 +1,68 @@
+    @function random-hex() {
+        $rgb: "";
+        $color: "";
+        $hex: "";
+        $i: 1;
+        $x: 1;
+        $z: 1;
+        @while $i >0 {
+            $hex-unit: random(16) - 1;
+            $letters: A,B,C,D,E,F;
+    
+            @if $hex-unit >9 {
+                $hex-unit: nth($letters, ($hex-unit - 9));
+            }
+            
+                $rgb: str-insert($rgb, ("" + $hex-unit) + ("" + $hex-unit), 0);
+                $i: $i - 1;
+        }
+        @while $x >0 {
+            $hex-units: random(16) - 1;
+            $letterss: A,B,C,D,E,F;
+    
+            @if $hex-units >9 {
+                $hex-units: nth($letterss, ($hex-units - 9));
+            }
+            
+                $color: str-insert($color, ("" + $hex-units) + ("" + $hex-units), 0);
+                $x: $x - 1;
+        }
+        @while $z >0 {
+            $hex-uni: random(16) - 1;
+            $letter: A,B,C,D,E,F;
+    
+            @if $hex-uni >9 {
+                $hex-uni: nth($letter, ($hex-uni - 9));
+            }
+            
+                $hex: str-insert($hex, ("" + $hex-uni) + ("" + $hex-uni), 0);
+                $z: $z - 1;
+        }
+        
+        $value: #{$rgb} + #{$color} + #{$hex};
+        @return unquote("#" + "#{$value}");
+    }
+    
+    body {
+        height: 100vh;
+    }
+    
+    section {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    
+        div {
+            height: 100%;
+            width: 10%;
+            $i: 1;
+            @while $i<=12 {
+                &:nth-child(0n + #{$i}) {
+                    background-color: random-hex();
+                }
+        
+                $i: $i+1;
+            }
+        }
+    }
+

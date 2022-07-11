@@ -1,0 +1,49 @@
+div {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+div h1 {
+  text-decoration: underline;
+  -webkit-text-decoration-color: blue;
+          text-decoration-color: blue;
+}
+div h2 {
+  border: 1px solid red;
+  padding: 1rem;
+}
+div section {
+  display: flex;
+  flex-direction: row;
+}
+
+div h1, div h2 {
+  color: green;
+}
+
+article {
+  color: red;
+  border: 1px solid green;
+  font-size: 1rem;
+}
+
+article:nth-of-type(odd) {
+  color: blue;
+  border: 1px solid green;
+  font-size: 1rem;
+}
+
+section:last-of-type article {
+  color: green;
+  border: 1px solid blue;
+  font-size: 24px;
+}
+
+div section article p {
+  padding: 10px;
+  align-self: center;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

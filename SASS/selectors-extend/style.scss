@@ -1,0 +1,48 @@
+div {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    & h1 {
+        @extend %heading;
+        text-decoration: underline;
+        text-decoration-color: blue;
+    }    
+    & h2 {
+        @extend %heading;
+        border: 1px solid red;
+        padding: 1rem;
+    }
+    & section {
+        display: flex;
+        flex-direction: row;
+        }
+     
+  }
+  
+%heading {
+    color: green;
+}
+
+@mixin article-card($color, $border, $font-size) {
+    color: $color;
+    border: $border;
+    font-size: $font-size;
+}
+
+article {
+    @include article-card(red, 1px solid green, 1rem)
+}
+article:nth-of-type(odd) {
+    @include article-card(blue, 1px solid green, 1rem)
+}
+section:last-of-type article {
+    @include article-card(green, 1px solid blue, 24px)
+}
+  div section article p {
+    padding: 10px;
+    align-self: center;
+    text-align: center;
+  }

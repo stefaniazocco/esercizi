@@ -1,0 +1,32 @@
+$green: green;
+$red: red;
+$blue: blue;
+
+div {
+    border: 1px solid $red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    h1 {
+        color: $green;
+        text-decoration: underline;
+        text-decoration-color: $blue;
+    }
+    section {
+        display: flex;
+        article {
+            flex: 1;
+            border: 1px solid $green;
+            color: $red;
+            
+            p {
+                padding: 10px;
+                align-self: center;
+                text-align: center;
+            }
+        }
+    }
+}
+article:nth-of-type(odd) {
+    color: $blue;}

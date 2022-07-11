@@ -1,0 +1,42 @@
+@use 'base';
+@use 'function';
+
+div {
+    border: function.rem(1) solid base.$red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: function.rem(10);
+    gap: function.rem(10);
+    h1 {
+        color: base.$green;
+        text-decoration: underline;
+        text-decoration-color: base.$blue;
+    }    
+    section {
+        display: flex;
+        flex-direction: row;
+        }
+  }
+
+
+@mixin article-card($color, $border, $font-size) {
+    color: $color;
+    border: $border;
+    font-size: $font-size;
+}
+
+article {
+    @include article-card(red, function.rem(1) solid green, 1rem)
+}
+article:nth-of-type(odd) {
+    @include article-card(blue, function.rem(1) solid green, 1rem)
+}
+section:last-of-type article {
+    @include article-card(green, function.rem(1) solid blue, function.rem(24))
+}
+  div section article p {
+    padding: function.rem(10);
+    align-self: center;
+    text-align: center;
+  }

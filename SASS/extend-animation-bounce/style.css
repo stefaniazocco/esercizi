@@ -51,58 +51,58 @@ body {
 }
 
 .bg-random:nth-child(0n+1) {
-  background-color: #998855;
+  background-color: #99CC44;
 }
 .bg-random:nth-child(0n+2) {
-  background-color: #115500;
+  background-color: #AA9944;
 }
 .bg-random:nth-child(0n+3) {
-  background-color: #0044FF;
+  background-color: #55BB44;
 }
 .bg-random:nth-child(0n+4) {
-  background-color: #222255;
+  background-color: #664422;
 }
 .bg-random:nth-child(0n+5) {
-  background-color: #4422DD;
+  background-color: #BB88BB;
 }
 .bg-random:nth-child(0n+6) {
-  background-color: #EE8877;
+  background-color: #AADDDD;
 }
 .bg-random:nth-child(0n+7) {
-  background-color: #77BB55;
+  background-color: #DD9988;
 }
 .bg-random:nth-child(0n+8) {
-  background-color: #FF2288;
+  background-color: #44BB44;
 }
 .bg-random:nth-child(0n+9) {
-  background-color: #22AA11;
+  background-color: #33DDEE;
 }
 .bg-random:nth-child(0n+10) {
-  background-color: #11AACC;
+  background-color: #FF3344;
 }
 .bg-random:nth-child(0n+11) {
-  background-color: #FFDD33;
+  background-color: #226600;
 }
 .bg-random:nth-child(0n+12) {
-  background-color: #333355;
+  background-color: #773322;
 }
 .bg-random:nth-child(0n+13) {
-  background-color: #AADD33;
+  background-color: #BB88AA;
 }
 .bg-random:nth-child(0n+14) {
-  background-color: #333355;
+  background-color: #8822FF;
 }
 .bg-random:nth-child(0n+15) {
-  background-color: #448877;
+  background-color: #662255;
 }
 .bg-random:nth-child(0n+16) {
-  background-color: #5555CC;
+  background-color: #99EE55;
 }
 .bg-random:nth-child(0n+17) {
-  background-color: #4466DD;
+  background-color: #7700AA;
 }
 .bg-random:nth-child(0n+18) {
-  background-color: #3300AA;
+  background-color: #444400;
 }
 
 /*# sourceMappingURL=style.css.map */

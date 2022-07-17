@@ -14,6 +14,7 @@ div h1 {
 div section {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 article {

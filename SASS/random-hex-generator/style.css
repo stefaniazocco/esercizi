@@ -12,40 +12,40 @@ section div {
   width: 10%;
 }
 section div:nth-child(0n+1) {
-  background-color: #7711DD;
+  background-color: #FF9911;
 }
 section div:nth-child(0n+2) {
-  background-color: #77FFAA;
+  background-color: #338844;
 }
 section div:nth-child(0n+3) {
-  background-color: #663344;
+  background-color: #992288;
 }
 section div:nth-child(0n+4) {
-  background-color: #DD33AA;
+  background-color: #EE1177;
 }
 section div:nth-child(0n+5) {
-  background-color: #44BB22;
+  background-color: #99FFFF;
 }
 section div:nth-child(0n+6) {
-  background-color: #7766AA;
+  background-color: #88EE11;
 }
 section div:nth-child(0n+7) {
-  background-color: #BB7799;
+  background-color: #6611BB;
 }
 section div:nth-child(0n+8) {
-  background-color: #DDDD66;
+  background-color: #998877;
 }
 section div:nth-child(0n+9) {
-  background-color: #55BBBB;
+  background-color: #1188BB;
 }
 section div:nth-child(0n+10) {
-  background-color: #77DDCC;
+  background-color: #EEDDAA;
 }
 section div:nth-child(0n+11) {
-  background-color: #003311;
+  background-color: #551100;
 }
 section div:nth-child(0n+12) {
-  background-color: #AADDDD;
+  background-color: #7722BB;
 }
 
 /*# sourceMappingURL=style.css.map */

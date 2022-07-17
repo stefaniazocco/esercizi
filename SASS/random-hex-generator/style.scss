@@ -1,47 +1,29 @@
-    @function random-hex() {
-        $rgb: "";
-        $color: "";
-        $hex: "";
-        $i: 1;
-        $x: 1;
-        $z: 1;
-        @while $i >0 {
-            $hex-unit: random(16) - 1;
-            $letters: A,B,C,D,E,F;
-    
-            @if $hex-unit >9 {
-                $hex-unit: nth($letters, ($hex-unit - 9));
-            }
-            
-                $rgb: str-insert($rgb, ("" + $hex-unit) + ("" + $hex-unit), 0);
-                $i: $i - 1;
-        }
-        @while $x >0 {
-            $hex-units: random(16) - 1;
-            $letterss: A,B,C,D,E,F;
-    
-            @if $hex-units >9 {
-                $hex-units: nth($letterss, ($hex-units - 9));
-            }
-            
-                $color: str-insert($color, ("" + $hex-units) + ("" + $hex-units), 0);
-                $x: $x - 1;
-        }
-        @while $z >0 {
-            $hex-uni: random(16) - 1;
-            $letter: A,B,C,D,E,F;
-    
-            @if $hex-uni >9 {
-                $hex-uni: nth($letter, ($hex-uni - 9));
-            }
-            
-                $hex: str-insert($hex, ("" + $hex-uni) + ("" + $hex-uni), 0);
-                $z: $z - 1;
+@function random-hex() {
+    $rgb: "";
+    $i: 1;
+    @while $i >0 {
+        $hex-unit: random(16) - 1;
+        $letters: A,B,C,D,E,F;
+
+        @if $hex-unit >9 {
+            $hex-unit: nth($letters, ($hex-unit - 9));
         }
         
-        $value: #{$rgb} + #{$color} + #{$hex};
-        @return unquote("#" + "#{$value}");
+            $rgb: str-insert($rgb, ("" + $hex-unit) + ("" + $hex-unit), 0);
+            $i: $i - 1;                   
     }
+    $value: #{$rgb};
+
+    @return unquote("#{$value}");
+}
+@function generate-hex() {
+    $color: "";
+    @for $x from 1 through 3 {
+        $color: $color + random-hex();
+        $x: $x + 1;
+    }
+    @return unquote("#" + "#{$color}");
+}
     
     body {
         height: 100vh;
@@ -58,7 +40,7 @@
             $i: 1;
             @while $i<=12 {
                 &:nth-child(0n + #{$i}) {
-                    background-color: random-hex();
+                    background-color: generate-hex();
                 }
         
                 $i: $i+1;

@@ -1,22 +1,24 @@
 function calculateSalary(role) {
-// ceo => 2200
-if (role === "ceo") {
-  return 2200;
-}
-// manager => 1800 
-// cto => 1800
-else if (role === "manager" || role === "cto") {
-  return 1800;
-}
+  // ceo => 2200
+  if (role === "ceo") {
+    return 2200;
+  }
+  
+  // manager => 1800 
+  // cto => 1800
+  else if (role === "manager" || role === "cto") {
+    return 1800;
+  }
 
-// developer => 1500
-else if (role === "developer") {
-  return 1500;
-}
-// default => 1000
-else  {
-  return 1000;
-}
+  // developer => 1500
+  else if (role === "developer") {
+    return 1500;
+  }
+  
+  // default => 1000
+  else  {
+    return 1000;
+  }
 }
 
 const ceoSalary = calculateSalary('ceo');

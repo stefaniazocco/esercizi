@@ -12,40 +12,40 @@ section div {
   width: 10%;
 }
 section div:nth-child(0n+1) {
-  background-color: #FF9911;
+  background-color: #AADD11;
 }
 section div:nth-child(0n+2) {
-  background-color: #338844;
+  background-color: #FF88CC;
 }
 section div:nth-child(0n+3) {
-  background-color: #992288;
+  background-color: #FF88FF;
 }
 section div:nth-child(0n+4) {
-  background-color: #EE1177;
-}
-section div:nth-child(0n+5) {
   background-color: #99FFFF;
 }
+section div:nth-child(0n+5) {
+  background-color: #0055AA;
+}
 section div:nth-child(0n+6) {
-  background-color: #88EE11;
+  background-color: #AAAA22;
 }
 section div:nth-child(0n+7) {
-  background-color: #6611BB;
+  background-color: #EEAA77;
 }
 section div:nth-child(0n+8) {
-  background-color: #998877;
+  background-color: #DDFF00;
 }
 section div:nth-child(0n+9) {
-  background-color: #1188BB;
+  background-color: #447755;
 }
 section div:nth-child(0n+10) {
-  background-color: #EEDDAA;
+  background-color: #666655;
 }
 section div:nth-child(0n+11) {
-  background-color: #551100;
+  background-color: #EEFFAA;
 }
 section div:nth-child(0n+12) {
-  background-color: #7722BB;
+  background-color: #008866;
 }
 
 /*# sourceMappingURL=style.css.map */

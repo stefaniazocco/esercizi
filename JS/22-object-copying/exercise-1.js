@@ -3,10 +3,10 @@ const person = {
   lastName: 'Doe',
   age: 25,
   job: 'Web Developer',
-  fullName: function(){
+  fullName(){
     return `${this.firstName} ${this.lastName}`;
   },
-  info: function(){
+  info(){
     return `${this.fullName()}, ${this.age} - ${this.job}`;
   }
 }

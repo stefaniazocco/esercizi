@@ -9,8 +9,9 @@ person2.firstName= 'Simon';
 
 console.log(person1); //Simon
 console.log(person2); //Simon
+console.log(person2===person1); //true
 
-//scrivendo person2=person1 significa che le due variabili sono uguali e connesse, condividono gli stessi valori, modificando una si modifica anche l'altra
+//scrivendo person2=person1 significa che le due variabili sono identiche, condividono gli stessi valori, modificando una si modifica anche l'altra
 
 
 
@@ -22,5 +23,6 @@ person2.firstName= 'Simon';
 
 console.log(person1); //John
 console.log(person2); //Simon
+console.log(person2===person1); //false
 
 //in questo caso è stato scritto che person2 è un oggetto a parte quindi modificando person2, l'altra variabile non cambia

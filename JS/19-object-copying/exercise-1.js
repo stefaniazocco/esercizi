@@ -10,7 +10,7 @@ person2.firstName= 'Simon';
 console.log(person1); //Simon
 console.log(person2); //Simon
 
-//scrivendo person2=person1 significa che le due variabili sono connesse, condividono gli stessi valori, modificando una si modifica anche l'altra
+//scrivendo person2=person1 significa che le due variabili sono uguali e connesse, condividono gli stessi valori, modificando una si modifica anche l'altra
 
 
 

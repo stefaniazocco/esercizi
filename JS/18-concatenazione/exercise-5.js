@@ -6,8 +6,9 @@ function memoize(fn) {
       return (`Numero ${num} già  presente nella cache, fattoriale: ${cache[num]}`);
     }
     else {
+      const newfactorial= fn(num);
       cache[num] = fn(num);
-      return (`Numero ${num} non presente, fattoriale: ${fn(num)}`)
+      return (`Numero ${num} non presente, fattoriale: ${newfactorial}`)
     }
   }
 }

@@ -8,19 +8,20 @@ class BankAccount {
   deposit(amount) {
     // throw an exception if amount is negative
     if (amount < 0){
-      throw new Error("You can't add a negative amount")
-    } else{
-      this.#amount += amount;
+      throw new Error("You can't deposit a negative amount")
     }
+    this.#amount += amount;
   }
 
   withdraw(amount) {
     // throw an exception if amount is negative or if withdrawal amount is greater than current amount
+    if (amount < 0){
+        throw new Error("You can't withdraw a negative amount")
+    }
     if (amount > this.#amount){
       throw new Error("You don't have enough money in your bank account")
-    } else{
-      this.#amount -= amount;
     }
+    this.#amount -= amount;
   }
 
   view() {

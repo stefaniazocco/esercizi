@@ -1,5 +1,5 @@
-function sum(num1, num2, num3) {
-  return num1 + num2 + num3;
+function sum(...num) {
+  return num.reduce((uno, due) => uno + due)
 }
 
 const numbers = [1, 2, 3];

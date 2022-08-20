@@ -3,6 +3,9 @@ const person = {
   firstName: 'Mario',
   lastName: 'Rossi',
   age: 25,
+  address: {
+    city: "Milan"
+  }
 };
 
 const json = JSON.stringify(person, ["id", "age"]);

@@ -20,7 +20,7 @@ const persons = [
 ];
 
 function fetchPersonById(id) {
-  return new Promise((resolve) => {
+  return new Promise((resolve) => { //(resolve. reject)
     if (persons.find((person) => person.id === id)){
       resolve(persons.find((person) => person.id === id))
     } // else {
@@ -30,7 +30,7 @@ function fetchPersonById(id) {
 }
 let uno = fetchPersonById(1);     //{ id: 1, firstName: 'Mario', lastName: 'Rossi', age: 25 }
 uno
-.then(console.log)              
+.then(console.log)             
 // .catch(err =>
 //   console.log("Error:", err.message))
 

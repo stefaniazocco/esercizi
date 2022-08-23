@@ -10,6 +10,26 @@
 </html>
 
 <script>
+let fetchPost = document.getElementById("fetch-post");
+let savePost = document.getElementById("save-post");
 
+let body; //per poter richiamare body nella seconda funzione
+
+fetchPost.addEventListener("click", 
+  async function fetchPost(){
+  fetch ("https://jsonplaceholder.typicode.com/posts/1")
+  .then ((response) => response.json())
+  .then ((data) => {      
+    body = data;
+    console.log(body)
+  })
+  }
+)
+
+savePost.addEventListener("click", 
+  async function savePost(){
+    localStorage.setItem("post", JSON.stringify(body));
+    console.log(localStorage.getItem("post"))
+  })
 
 </script>

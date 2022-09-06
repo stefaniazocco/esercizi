@@ -20,7 +20,17 @@
 </html>
 
 <script>
-  // code here
-
   
+  const inputs = document.querySelectorAll(".form-input");
+
+  const person = {};
+  inputs.forEach(input => {
+    person[input.id] = input.value; //chiave dinamica != chiave statica
+  })
+
+  console.log(person)
+
+  const form = document.querySelector("form");
+  form.setAttribute("data-person", JSON.stringify(person))
+
 </script>

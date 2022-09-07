@@ -1,0 +1,50 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  // Code here
+
+  const firstName = document.createElement("input");
+  firstName.setAttribute("type", "text");
+  firstName.setAttribute("value", "Mario");
+  firstName.style.display = "block";
+
+  const lastName = document.createElement("input");
+  lastName.setAttribute("type", "text");
+  lastName.setAttribute("value", "Rossi");
+  lastName.style.display = "block";
+
+  const age = document.createElement("input");
+  age.setAttribute("type", "text");
+  age.setAttribute("value", "25");
+  age.style.display = "block";
+
+
+  window.onload = () => {
+  const form = document.getElementById("person-form");
+  form.insertBefore(firstName, form.children[0]);
+  form.insertBefore(lastName, form.children[1]);
+  form.insertBefore(age, form.children[2]);
+  }
+
+  const button = document.querySelector("button");
+
+  button.onclick = function submitPersonForm(e) {
+    e.preventDefault();
+    const person = {
+      "First name" : firstName.value,
+      "Last name" : lastName.value,
+      "Age" : age.value
+    };
+    console.log(person)
+  }
+
+</script>

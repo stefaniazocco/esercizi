@@ -28,7 +28,7 @@
   age.style.display = "block";
 
 
-  window.onload = () => {
+  window.onload = function initForm() {
   const form = document.getElementById("person-form");
   form.insertBefore(firstName, form.children[0]);
   form.insertBefore(lastName, form.children[1]);

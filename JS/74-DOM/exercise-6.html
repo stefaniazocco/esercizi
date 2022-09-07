@@ -30,9 +30,9 @@
 
   window.onload = function initForm() {
   const form = document.getElementById("person-form");
-  form.insertBefore(firstName, form.children[0]);
-  form.insertBefore(lastName, form.children[1]);
-  form.insertBefore(age, form.children[2]);
+  form.prepend(firstName, form.children[0]);
+  form.prepend(lastName, form.children[1]);
+  form.prepend(age, form.children[2]);
   }
 
   const button = document.querySelector("button");

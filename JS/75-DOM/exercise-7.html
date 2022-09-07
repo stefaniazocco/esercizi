@@ -72,4 +72,11 @@
   }
 
   window.addEventListener("DOMContentLoaded", initForm);
+
+  const personFormLoaded = new CustomEvent('personLoaded');
+  window.addEventListener('personLoaded', () => {
+    console.log('Person Form Loaded');
+  })
+  window.dispatchEvent(personFormLoaded);
+
 </script>

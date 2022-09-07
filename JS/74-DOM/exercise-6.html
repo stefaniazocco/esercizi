@@ -23,16 +23,16 @@
   lastName.style.display = "block";
 
   const age = document.createElement("input");
-  age.setAttribute("type", "text");
+  age.setAttribute("type", "number");
   age.setAttribute("value", "25");
   age.style.display = "block";
 
 
   window.onload = function initForm() {
   const form = document.getElementById("person-form");
-  form.prepend(firstName, form.children[0]);
-  form.prepend(lastName, form.children[1]);
-  form.prepend(age, form.children[2]);
+  form.prepend(age);
+  form.prepend(lastName);
+  form.prepend(firstName);
   }
 
   const button = document.querySelector("button");

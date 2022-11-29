@@ -26,6 +26,8 @@ test("GET /users", async () => {
     const response = await request
         .get("/users")
         .expect(200)
-        .expect("Content-Type", /application\/json/);
+        .expect("Content-Type", /application\/json/)
     expect(response.body).toEqual(users);
+
 });
+

@@ -22,3 +22,17 @@ class Text {
   console.log(new Text("Hello, I'm talking").toString());
   
   console.log(new Shout(new Text("Hello, I'm shouting!")).toString());
+
+//------------------
+//oppure
+
+  function uppercaseText(text) {
+    let originalToString = text.toString();
+
+    text.toString = function () {
+        return originalToString.toUpperCase()
+    }
+    return text;
+  }
+
+  console.log(uppercaseText(new Text("Hello, I'm screaming!!!")).toString());

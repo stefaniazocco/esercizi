@@ -1,0 +1,10 @@
+{
+    "extends": "@tsconfig/node16/tsconfig.json",
+    "compilerOptions" : {
+        "outDir": "./dist",
+        "sourceMap": true,
+        // "types": ["jest", "node"]
+    },
+    "include" : ["./src/**/*.ts"],
+    // "exclude" : ["./src/**/*.test.ts"]
+}
